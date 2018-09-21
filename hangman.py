@@ -69,44 +69,13 @@ HANGMAN = (
 )
 
 
-"""def game():
-    draw = 0
-    print word
-    wordl = list(word)
-    while draw < goes:
-        print str(display) #prints the _ _ of the word to be guessed
-        user_g = raw_input("Guess a letter: ")
-        guessed_letters.add(user_g) #add guesses to the set (only unique values)
-        print guessed_letters
-        if user_g in guessed_letters:
-            print("Already guessed!!")
-            user_g = raw_input("Guess a letter: ")
-        
-            print "yay" #to prove guess is in the word
-        if user_g.upper() in word:
-            for i, letter in enumerate(word):
-                if user_g.upper() == letter:
-                    display[i] = user_g.upper()
-                    print display
-            for i, letter in enumerate(word): #the problem - the guess isn't being added to the display
-                if user_g == letter:
-                    display[i] = letter
-            if "_ " not in display:
-                print "You win!"
-                break
-        else:
-            print "Not in the word. Try again!"
-            draw +=1 #index for correct hangman image
-            print HANGMAN[draw]
-            
-game()"""
 if __name__ == '__main__':
     goes = len(HANGMAN) - 1
     word = get_word()
     display = ["_ "]*len(word)
     guessed_letters = set()
     draw = 0
-    print word
+    #print word - for checking purposes
     while draw < goes:
         print display
         user_g = raw_input("Letter: ")
